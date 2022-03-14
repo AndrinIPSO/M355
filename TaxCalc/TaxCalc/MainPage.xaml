@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TaxCalc.MainPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Label x:Name="lb_title" Text="Geben Sie einen Brutto oder Nettobetrag ein und lassen sie sich die Umsatzsteuer berechnen" Grid.Row="0"/>
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Entry x:Name="en_amount" Text="100" Grid.Row="0" Keyboard="Numeric"></Entry>
+            <RadioButton x:Name="rb_Netto" Content="Netto" Grid.Row="1" GroupName="art" IsChecked="True"/>
+            <RadioButton x:Name="rb_Brutto" Content="Brutto" Grid.Row="2" GroupName="art"/>
+            <Picker x:Name="pk_prozent" Title="Prozent" Grid.Row="3">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>8 Prozent</x:String>
+                        <x:String>3.5Prozent</x:String>
+                        <x:String>2.5Prozent</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+        </Grid>
+        <Grid Grid.Row="2">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Button x:Name="bt_calc" Text="Berechnen" Clicked="bt_calc_Clicked" Grid.Row="0"/>
+        </Grid>
+
+    </Grid>
+
+</ContentPage>

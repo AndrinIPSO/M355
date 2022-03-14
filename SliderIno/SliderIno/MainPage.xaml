@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SliderIno.MainPage">
+    <ContentPage.Resources>
+        <Style TargetType="Label" x:Key="bigL">
+            <Setter Property="TextColor" Value="CadetBlue"/>
+            <Setter Property="FontSize" Value="Large"/>
+        </Style>
+    </ContentPage.Resources>
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="7*"/>
+        </Grid.RowDefinitions>
+        <Label Grid.Row="0" Style="{StaticResource bigL}" Text="{Binding Value}" BindingContext="{x:Reference slider}" Rotation="{Binding Value}" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
+        <Slider Grid.Row="1" x:Name="slider" Maximum="360"/>
+        <Button Grid.Row="3" x:Name="bt_next" Text="->" Clicked="bt_next_Clicked"/>
+    </Grid>
+</ContentPage>

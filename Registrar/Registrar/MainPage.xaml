@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Registrar.MainPage">
+    <ContentPage.Resources>
+        <Style TargetType="Label" x:Key="Title">
+            <Setter Property="FontSize" Value="Large"/>
+            <Setter Property="VerticalOptions" Value="CenterAndExpand"/>
+            <Setter Property="HorizontalOptions" Value="Center"/>
+        </Style>
+        <Style TargetType="Button" x:Key="Reg">
+            <Setter Property="Margin" Value="10,20"/>
+            <Setter Property="CornerRadius" Value="20"/>
+        </Style>
+        <Style TargetType="Button" x:Key="Log">
+            <Setter Property="Margin" Value="10,50"/>
+            <Setter Property="CornerRadius" Value="20"/>
+        </Style>
+    </ContentPage.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="3*"/>
+        </Grid.RowDefinitions>
+        
+        
+        <BoxView Color="Green" Grid.Row="0"/>
+        <Label Text="Registrieren" Style="{StaticResource Title}" Grid.Row="1"/>
+        <Entry x:Name="en_Name" Placeholder="Max Muster" Grid.Row="2"/>
+        <Entry x:Name="en_Mail" Placeholder="Max Muster" Grid.Row="3"/>
+        <Entry x:Name="en_Password" IsPassword="True" Placeholder="Max Muster" Grid.Row="4"/>
+        <Button x:Name="bt_register" Text="Registrieren" Grid.Row="5" Style="{StaticResource Reg}"/>
+        <Button x:Name="bt_login" Text="Already Have an Account" Grid.Row="6" Style="{StaticResource Log}"/>
+        <Button x:Name="bt_google" Text="With Google" Grid.Row="7" Style="{StaticResource Log}"/>
+    </Grid>
+</ContentPage>
