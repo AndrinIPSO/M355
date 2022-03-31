@@ -33,11 +33,11 @@
         
         <BoxView Color="Green" Grid.Row="0"/>
         <Label Text="Registrieren" Style="{StaticResource Title}" Grid.Row="1"/>
-        <Entry x:Name="en_Name" Placeholder="Max Muster" Grid.Row="2"/>
-        <Entry x:Name="en_Mail" Placeholder="Max Muster" Grid.Row="3"/>
+        <Entry x:Name="en_Name" Text="{Binding Name}" Placeholder="Max Muster" Grid.Row="2"/>
+        <Entry x:Name="en_Mail" Text="{Binding Mail}" Placeholder="Max Muster" Grid.Row="3"/>
         <Entry x:Name="en_Password" IsPassword="True" Placeholder="Max Muster" Grid.Row="4"/>
-        <Button x:Name="bt_register" Text="Registrieren" Grid.Row="5" Style="{StaticResource Reg}"/>
+        <Button x:Name="bt_register" Clicked="bt_register_Clicked" Text="Registrieren" Grid.Row="5" Style="{StaticResource Reg}"/>
         <Button x:Name="bt_login" Text="Already Have an Account" Grid.Row="6" Style="{StaticResource Log}"/>
-        <Button x:Name="bt_google" Text="With Google" Grid.Row="7" Style="{StaticResource Log}"/>
+        <Button x:Name="bt_google" Text="With Google" Command="{Binding OpenBestaetigung}"  Grid.Row="7" Style="{StaticResource Log}"/>
     </Grid>
 </ContentPage>

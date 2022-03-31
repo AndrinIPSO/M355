@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Registrar.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -13,7 +14,14 @@ namespace Registrar
         public MainPage()
         {
             InitializeComponent();
+            BindingContext = new RegisterVerarbeitung(this);
         }
 
+        private async void bt_register_Clicked(object sender, EventArgs e)
+        {
+            bestaetigung bs = new bestaetigung();
+            bs.BindingContext = BindingContext;
+            await Navigation.PushAsync(bs);
+        }
     }
 }

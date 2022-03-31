@@ -9,8 +9,8 @@
             <RowDefinition Height="7*"/>
             <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
-        <Label Text="Ihre Eingabe" Grid.Row="0"/>
-        <Label x:Name="lb_result" Grid.Row="1" />
+        <Label Text="Ihre Eingabe " Grid.Row="0"/>
+        <Label x:Name="lb_result" Text="{Binding ShowPerson}" Grid.Row="1" />
         <Button x:Name="bt_back" Text="zurück" Grid.Row="2"/>
     </Grid>
 </ContentPage>
