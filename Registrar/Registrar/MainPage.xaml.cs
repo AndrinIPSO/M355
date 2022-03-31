@@ -17,6 +17,8 @@ namespace Registrar
             BindingContext = new RegisterVerarbeitung(this);
         }
 
+
+        // Alte Methode Für Test --> "mit Googgle" Button für neue Methode
         private async void bt_register_Clicked(object sender, EventArgs e)
         {
             bestaetigung bs = new bestaetigung();
