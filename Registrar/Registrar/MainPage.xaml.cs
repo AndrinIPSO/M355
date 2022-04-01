@@ -14,16 +14,11 @@ namespace Registrar
         public MainPage()
         {
             InitializeComponent();
-            BindingContext = new RegisterViewModel(this);
+            BindingContext = new RegisterViewModel();
         }
 
 
         // Alte Methode Für Test --> "mit Googgle" Button für neue Methode
-        private async void bt_register_Clicked(object sender, EventArgs e)
-        {
-            BestaetigungPage bs = new BestaetigungPage();
-            bs.BindingContext = BindingContext;
-            await Navigation.PushAsync(bs);
-        }
+
     }
 }

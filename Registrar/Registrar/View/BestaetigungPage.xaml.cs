@@ -13,8 +13,9 @@ namespace Registrar
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class BestaetigungPage : ContentPage
     {
-        public BestaetigungPage()
+        public BestaetigungPage(BestaetigungViewModel bvm)
         {
+            BindingContext = bvm;
             InitializeComponent();
         }
     }

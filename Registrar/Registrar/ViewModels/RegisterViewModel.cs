@@ -8,24 +8,19 @@ using Xamarin.Forms;
 
 namespace Registrar.ViewModels
 {
-    public class RegisterViewModel : INotifyPropertyChanged
+    public class RegisterViewModel : ViewModelBase
     {
-        public event PropertyChangedEventHandler PropertyChanged;
 
-        RegisterDaten registerDaten = new RegisterDaten();
+        public RegisterDaten registerDaten = new RegisterDaten();
 
         MainPage MP;
 
-        public RegisterViewModel(MainPage mp)
+        public RegisterViewModel()
         {
-            MP = mp;
             OpenBestaetigung = new Command(OpenB);
         }
 
-        void OnPropertyChanged([CallerMemberName] string name = "")
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
-        }
+
 
         public string Name
         {
@@ -57,9 +52,13 @@ namespace Registrar.ViewModels
 
         async void OpenB()
         {
-            BestaetigungPage bs = new BestaetigungPage();
-            bs.BindingContext = this;
-            await MP.Navigation.PushAsync(bs);
+            BestaetigungViewModel bestaetigungViewModel = new BestaetigungViewModel();
+            bestaetigungViewModel.registerDaten = this.registerDaten;
+            await Application.Current.MainPage.Navigation.PushAsync(new BestaetigungPage(bestaetigungViewModel));
+
+            //BestaetigungPage bs = new BestaetigungPage();
+            //bs.BindingContext = this;
+            //await MP.Navigation.PushAsync(bs);
         }
 
         public Command OpenBestaetigung { get; }

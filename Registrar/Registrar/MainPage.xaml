@@ -1,7 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Registrar.MainPage">
+             x:Class="Registrar.MainPage"
+             xmlns:viewModels="clr-namespace:Registrar.ViewModels"
+             >
+    <ContentPage.BindingContext>
+        <viewModels:RegisterViewModel/>
+    </ContentPage.BindingContext>
+    
+    
+
+
     <ContentPage.Resources>
         <Style TargetType="Label" x:Key="Title">
             <Setter Property="FontSize" Value="Large"/>
@@ -36,7 +45,7 @@
         <Entry x:Name="en_Name" Text="{Binding Name}" Placeholder="Max Muster" Grid.Row="2"/>
         <Entry x:Name="en_Mail" Text="{Binding Mail}" Placeholder="Max Muster" Grid.Row="3"/>
         <Entry x:Name="en_Password" IsPassword="True" Placeholder="Max Muster" Grid.Row="4"/>
-        <Button x:Name="bt_register" Clicked="bt_register_Clicked" Text="Registrieren" Grid.Row="5" Style="{StaticResource Reg}"/>
+        <Button x:Name="bt_register"  Text="Registrieren" Grid.Row="5" Style="{StaticResource Reg}"/>
         <Button x:Name="bt_login" Text="Already Have an Account" Grid.Row="6" Style="{StaticResource Log}"/>
         <Button x:Name="bt_google" Text="With Google" Command="{Binding OpenBestaetigung}"  Grid.Row="7" Style="{StaticResource Log}"/>
     </Grid>
