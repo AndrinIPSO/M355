@@ -8,7 +8,7 @@ using Xamarin.Forms;
 
 namespace Registrar.ViewModels
 {
-    public class RegisterVerarbeitung : INotifyPropertyChanged
+    public class RegisterViewModel : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -16,7 +16,7 @@ namespace Registrar.ViewModels
 
         MainPage MP;
 
-        public RegisterVerarbeitung(MainPage mp)
+        public RegisterViewModel(MainPage mp)
         {
             MP = mp;
             OpenBestaetigung = new Command(OpenB);
@@ -57,7 +57,7 @@ namespace Registrar.ViewModels
 
         async void OpenB()
         {
-            bestaetigung bs = new bestaetigung();
+            BestaetigungPage bs = new BestaetigungPage();
             bs.BindingContext = this;
             await MP.Navigation.PushAsync(bs);
         }

@@ -17,7 +17,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaxCalc.Android", "TaxCalc\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaxCalc.iOS", "TaxCalc\TaxCalc.iOS\TaxCalc.iOS.csproj", "{6C490736-A818-4247-A3FD-96DCE6F56B48}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaxCalc", "TaxCalc\TaxCalc\TaxCalc.csproj", "{42096F14-82C8-446B-94B0-27DCE7C8A98D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TaxCalc", "TaxCalc\TaxCalc\TaxCalc.csproj", "{42096F14-82C8-446B-94B0-27DCE7C8A98D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DataBinding", "DataBinding", "{59201EE3-857F-4821-B295-762DE33E4BBF}"
 EndProject
@@ -25,7 +25,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SliderIno.Android", "Slider
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SliderIno.iOS", "SliderIno\SliderIno.iOS\SliderIno.iOS.csproj", "{5E90F3B9-8527-4287-B801-71F003280C0D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SliderIno", "SliderIno\SliderIno\SliderIno.csproj", "{4AF6D51D-7A2E-44A9-BB89-F46B46B818F2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SliderIno", "SliderIno\SliderIno\SliderIno.csproj", "{4AF6D51D-7A2E-44A9-BB89-F46B46B818F2}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NVVM", "NVVM", "{75C33B08-09AB-49CD-B005-FB406C1C3A49}"
 EndProject
@@ -33,7 +33,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Registrar.Android", "Regist
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Registrar.iOS", "Registrar\Registrar.iOS\Registrar.iOS.csproj", "{D5521EB0-0233-4FF1-8FA2-7D034FECBF94}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Registrar", "Registrar\Registrar\Registrar.csproj", "{EAB329E8-6A50-4FA6-B20F-EB8C31260D20}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Registrar", "Registrar\Registrar\Registrar.csproj", "{EAB329E8-6A50-4FA6-B20F-EB8C31260D20}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

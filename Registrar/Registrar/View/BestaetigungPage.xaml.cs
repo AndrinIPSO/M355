@@ -11,9 +11,9 @@ using Xamarin.Forms.Xaml;
 namespace Registrar
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class bestaetigung : ContentPage
+    public partial class BestaetigungPage : ContentPage
     {
-        public bestaetigung()
+        public BestaetigungPage()
         {
             InitializeComponent();
         }
